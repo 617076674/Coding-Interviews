@@ -11,7 +11,7 @@ package question013;
  *
  * 运行时间：18ms。占用内存：9156k。
  */
-public class Solution {
+public class Solution1 {
     public void reOrderArray(int[] array) {
         int n = array.length;
         for (int sz = 1; sz < n; sz *= 2) {
