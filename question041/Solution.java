@@ -20,10 +20,6 @@ public class Solution {
         if (sum <= 1) {
             return result;
         }
-        if (sum == 3) {
-            addToResult(1, 2);
-            return result;
-        }
         int left = 1, right = 2, total = 3, mid = (1 + ((sum - 1) >> 1));
         while (left < mid) {
             if (total == sum) {
