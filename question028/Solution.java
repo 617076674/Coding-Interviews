@@ -11,11 +11,12 @@ package question028;
  */
 public class Solution {
     public int MoreThanHalfNum_Solution(int[] array) {
-        if (null == array || array.length == 0) {
+        int n;
+        if (null == array || (n = array.length) == 0) {
             return 0;
         }
         int result = array[0], count = 1;
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 1; i < n; i++) {
             if (count == 0) {
                 result = array[i];
                 count++;
@@ -27,11 +28,11 @@ public class Solution {
         }
         //众数可能不存在，需要判断求得的数是否是众数
         int times = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < n; i++) {
             if (array[i] == result) {
                 times++;
             }
         }
-        return times > (array.length >> 1) ? result : 0;
+        return times > (n >> 1) ? result : 0;
     }
 }
