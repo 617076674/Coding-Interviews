@@ -13,15 +13,20 @@ public class Solution {
         if (pNode == null) {
             return null;
         }
+        //如果一个节点有右子树，那么它的下一个节点就是它的右子树中的最左子节点。
         if (pNode.right != null) {
+            //也就是说，从右子节点出发一直沿着指向左子节点的指针，我们就能找到它的下一个节点。
             TreeLinkNode cur = pNode.right;
             while (cur.left != null) {
                 cur = cur.left;
             }
             return cur;
         }
-
+        //走到这里，说明该节点没有右子树。
+        //如果节点是它父节点的左子节点，那么它的下一个节点就是它的父节点。
         TreeLinkNode cur = pNode, parent = pNode.next;
+        //如果节点是它父节点的右子节点，我们需要沿着指向父节点的指针一直向上遍历，直到找到一个是它父节点的左子节点的节点。
+        //如果这样的节点存在，那么这个节点的父节点就是我们要找的下一个节点。
         while (parent != null && cur == parent.right) {
             cur = parent;
             parent = parent.next;
