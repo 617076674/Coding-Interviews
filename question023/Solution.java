@@ -10,10 +10,11 @@ package question023;
  */
 public class Solution {
     public boolean VerifySquenceOfBST(int[] sequence) {
-        if (sequence.length == 0) {
+        int n;
+        if (null == sequence || (n = sequence.length) == 0) {
             return false;
         }
-        return VerifySquenceOfBST(sequence, 0, sequence.length - 1);
+        return VerifySquenceOfBST(sequence, 0, n - 1);
     }
 
     private boolean VerifySquenceOfBST(int[] sequence, int left, int right) {
