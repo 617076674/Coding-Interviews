@@ -4,6 +4,10 @@ package question061;
  * @author qianyihui
  * @date 2019-07-21
  *
+ * 序列化二叉树
+ *
+ * 请实现两个函数，分别用来序列化和反序列化二叉树。
+ *
  * 运行时间：42ms。占用内存：9544k。
  */
 public class Solution {
@@ -13,13 +17,11 @@ public class Solution {
 
     String Serialize(TreeNode root) {
         preOrderTraversal(root);
-        preOrder.deleteCharAt(0);
-        return preOrder.toString();
+        return preOrder.deleteCharAt(0).toString();
     }
 
     TreeNode Deserialize(String str) {
-        String[] strings = str.split(",");
-        return build(strings);
+        return build(str.split(","));
     }
 
     private void preOrderTraversal(TreeNode treeNode) {
