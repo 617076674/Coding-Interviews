@@ -1,14 +1,13 @@
-package question020;
+package question020_stack_containing_the_min_function;
 
 import java.util.Stack;
 
 /**
- * @author qianyihui
- * @date 2019-07-19
+ * https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49
  *
- * 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。
+ * 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O(1)）。
  *
- * 运行时间：23ms。占用内存：9380k。
+ * 运行时间：14ms。占用内存：9400k。
  */
 public class Solution {
     private Stack<Integer> stack1 = new Stack<>();
@@ -19,10 +18,8 @@ public class Solution {
         stack1.push(node);
         if (stack2.isEmpty()) {
             stack2.push(node);
-        } else if (stack2.peek() > node) {
-            stack2.push(node);
         } else {
-            stack2.push(stack2.peek());
+            stack2.push(Math.min(node, stack2.peek()));
         }
     }
 

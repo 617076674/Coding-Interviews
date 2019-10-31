@@ -1,10 +1,11 @@
-package question016;
+package question016_combine_two_sorted_linked_lists;
 
 /**
- * @author qianyihui
- * @date 2019-07-19
+ * https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337
  *
  * 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
+ *
+ * 时间复杂度是O(n1 + n2)，其中n1是链表list1的长度，n2是链表list2的长度。空间复杂度是O(1)。
  *
  * 运行时间：23ms。占用内存：9488k。
  */

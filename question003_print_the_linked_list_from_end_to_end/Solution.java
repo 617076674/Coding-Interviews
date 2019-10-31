@@ -8,6 +8,8 @@ import java.util.Stack;
  *
  * 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
  *
+ * 时间复杂度和空间复杂度均是O(n)，其中n为listNode链表的节点个数。
+ *
  * 运行时间：30ms。占用内存：9272k。
  */
 public class Solution {
