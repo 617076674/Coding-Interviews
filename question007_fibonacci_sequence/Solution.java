@@ -1,8 +1,10 @@
-package question007;
+package question007_fibonacci_sequence;
 
 /**
- * @author qianyihui
- * @date 2019-07-19
+ * https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3
+ *
+ * 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。
+ * n<=39
  *
  * 运行时间：18ms。占用内存：9288k。
  */

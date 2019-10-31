@@ -1,8 +1,10 @@
-package question005;
+package question005_queue_with_two_stacks;
 
 import java.util.Stack;
 
 /**
+ * https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
+ *
  * 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
  *
  * 运行时间：26ms。占用内存：9264k。

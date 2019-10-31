@@ -1,8 +1,7 @@
-package question002;
+package question002_replace_space;
 
 /**
- * @author qianyihui
- * @date 2019-07-19
+ * https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423
  *
  * 请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
  *

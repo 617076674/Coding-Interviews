@@ -1,11 +1,10 @@
-package question003;
+package question003_print_the_linked_list_from_end_to_end;
 
 import java.util.ArrayList;
 import java.util.Stack;
 
 /**
- * @author qianyihui
- * @date 2019-07-19
+ * https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
  *
  * 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
  *
