@@ -1,8 +1,7 @@
-package question040;
+package question040_a_number_that_appears_only_once_in_the_array;
 
 /**
- * @author qianyihui
- * @date 2019-07-20
+ * https://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811
  *
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
  *

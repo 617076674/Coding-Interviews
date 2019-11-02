@@ -1,13 +1,14 @@
-package question039;
+package question039_balanced_binary_tree;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author qianyihui
- * @date 2019-07-20
+ * https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222
  *
  * 输入一棵二叉树，判断该二叉树是否是平衡二叉树。
+ *
+ * 时间复杂度和空间复杂度均是O(n)，其中n为树中的节点个数。
  *
  * 运行时间：21ms。占用内存：9336k。
  */
@@ -15,12 +16,10 @@ public class Solution {
     private Map<TreeNode, Integer> map = new HashMap<>();
 
     public boolean IsBalanced_Solution(TreeNode root) {
-        if (root == null) {
+        if (null == root) {
             return true;
         }
-        int leftHeight = TreeDepth(root.left);
-        int rightHeight = TreeDepth(root.right);
-        if (Math.abs(leftHeight - rightHeight) > 1) {
+        if (Math.abs(TreeDepth(root.left) - TreeDepth(root.right)) > 1) {
             return false;
         }
         return IsBalanced_Solution(root.left) && IsBalanced_Solution(root.right);
@@ -30,7 +29,7 @@ public class Solution {
         if (map.containsKey(root)) {
             return map.get(root);
         }
-        if (root == null) {
+        if (null == root) {
             return 0;
         }
         int result = Math.max(TreeDepth(root.left), TreeDepth(root.right)) + 1;

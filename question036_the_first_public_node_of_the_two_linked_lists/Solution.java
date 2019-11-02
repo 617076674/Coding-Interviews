@@ -1,10 +1,13 @@
-package question036;
+package question036_the_first_public_node_of_the_two_linked_lists;
 
 /**
- * @author qianyihui
- * @date 2019-07-20
+ * https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46
  *
  * 输入两个链表，找出它们的第一个公共结点。
+ *
+ * 双指针。让长链表上的指针先走链表长度差值的步数。
+ *
+ * 时间复杂度是O(n1 + n2)，其中n1是链表pHead1的长度，n2是链表pHead2的长度。空间复杂度是O(1)。
  *
  * 运行时间：17ms。占用内存：9336k。
  */
@@ -24,7 +27,7 @@ public class Solution {
                 cur2 = cur2.next;
             }
         }
-        while (cur1 != null) {
+        while (null != cur1) {
             if (cur1 == cur2) {
                 return cur1;
             }
