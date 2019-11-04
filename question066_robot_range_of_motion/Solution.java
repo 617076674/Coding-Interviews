@@ -1,8 +1,7 @@
-package question066;
+package question066_robot_range_of_motion;
 
 /**
- * @author qianyihui
- * @date 2019-07-21
+ * https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc
  *
  * 地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，
  * 但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。
@@ -37,8 +36,7 @@ public class Solution {
         visited[x][y] = true;
         result++;
         for (int i = 0; i < 4; i++) {
-            int newX = directions[i][0] + x;
-            int newY = directions[i][1] + y;
+            int newX = directions[i][0] + x, newY = directions[i][1] + y;
             if (newX >= 0 && newX < graph.length && newY >= 0 && newY < graph[0].length
                     && graph[newX][newY] <= threshold && !visited[newX][newY]) {
                 dfs(newX, newY, threshold);

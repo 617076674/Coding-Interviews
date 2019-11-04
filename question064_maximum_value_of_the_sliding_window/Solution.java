@@ -1,4 +1,4 @@
-package question064;
+package question064_maximum_value_of_the_sliding_window;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -18,6 +18,10 @@ import java.util.LinkedList;
  * {2,3,4,[2,6,2],5,1}，
  * {2,3,4,2,[6,2,5],1}，
  * {2,3,4,2,6,[2,5,1]}。
+ *
+ * 双端队列。
+ *
+ * 时间复杂度是O(n)，其中n是num数组的长度。空间复杂度是O(size)。
  *
  * 运行时间：18ms。占用内存：9284k。
  */
